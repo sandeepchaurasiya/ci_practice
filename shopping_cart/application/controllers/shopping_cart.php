@@ -15,7 +15,7 @@ class Shopping_cart extends CI_Controller {
   $this->load->library("cart");
   $data = array(
    "id"  => $_POST["product_id"],
-   "name"  => $_POST[" n"],
+   "name"  => $_POST["product_name"],
    "qty"  => $_POST["quantity"],
    "price"  => $_POST["product_price"]
   );

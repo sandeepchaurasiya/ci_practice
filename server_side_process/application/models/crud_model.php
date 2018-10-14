@@ -1,7 +1,7 @@
  <?php  
  class Crud_model extends CI_Model  
  {  
-      var $table = "users";  
+      var $table = "user";  
       var $select_column = array("id", "first_name", "last_name", "image");  
       var $order_column = array(null, "first_name", "last_name", null, null);  
       function make_query()  

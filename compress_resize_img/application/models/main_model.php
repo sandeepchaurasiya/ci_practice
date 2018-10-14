@@ -1,7 +1,7 @@
 <?php
 class Main_model extends CI_Model
 {
-function insert_image($data)  
+	function insert_image($data)  
       {  
            $this->db->insert("tbl_images", $data);  
       }  
