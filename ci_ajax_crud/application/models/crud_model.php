@@ -1,7 +1,7 @@
 <?php  
  class Crud_model extends CI_Model  
  {  
-      var $table = "users";  
+      var $table = "user";  
       var $select_column = array("id", "first_name", "last_name", "image");  
       var $order_column = array(null, "first_name", "last_name", null, null);  
       function make_query()  
@@ -44,23 +44,23 @@
       }  
       function insert_crud($data)  
       {  
-           $this->db->insert('users', $data);  
+           $this->db->insert('user', $data);  
       }  
       function fetch_single_user($user_id)  
       {  
            $this->db->where("id", $user_id);  
-           $query=$this->db->get('users');  
+           $query=$this->db->get('user');  
            return $query->result();  
       }  
       function update_crud($user_id, $data)  
       {  
            $this->db->where("id", $user_id);  
-           $this->db->update("users", $data);  
+           $this->db->update("user", $data);  
       }  
       function delete_single_user($user_id)  
       {  
            $this->db->where("id", $user_id);  
-           $this->db->delete("users");  
-           //DELETE FROM users WHERE id = '$user_id'  
+           $this->db->delete("user");  
+           //DELETE FROM user WHERE id = '$user_id'  
       }  
  }  
