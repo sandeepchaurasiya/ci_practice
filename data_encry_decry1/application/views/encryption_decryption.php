@@ -29,17 +29,17 @@
 			<h3 align="center">Codeigniter3 Encryption and Decryption - Fetch Data</h3>
 			<br />
 			<div class="table-responsive">
-			<?php
-			if($this->session->flashdata('action'))
-			{
-				echo '
-				<div class="alert alert-success alert-dismissible">
-						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-						'.$this->session->flashdata('action').'
-					</div>
-				';
-			}
-			?>
+		<?php
+		if($this->session->flashdata('action'))
+		{
+			echo'
+			<div class="alert alert-success alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			'.$this->session->flashdata('action').'</div>
+			';
+		}
+		
+		?>
 				<div align="right">
 					<a href="<?php echo base_url(); ?>encryptiondecryption/insert" class="btn btn-primary btn-sm">Add</a>
 				</div>
@@ -52,20 +52,19 @@
 						<th>Gender</th>
 						<th>Edit</th>
 					</tr>
-					<?php
-					foreach($data->result() as $row)
-					{
-						echo '
-						<tr>
-							<td>'.$this->encrypt->decode($row->first_name).'</td>
-							<td>'.$this->encrypt->decode($row->last_name).'</td>
-							<td>'.$this->encrypt->decode($row->age).'</td>
-							<td>'.$this->encrypt->decode($row->gender).'</td>
-							<td><a href="'.base_url().'encryptiondecryption/edit/'.$row->id.'">Edit</a></td>
-						</tr>
-						';
-					}
-					?>
+				<?php
+				foreach($data->result() as $row)
+				{
+					echo '
+					<tr>
+						<td>'.$this->encrypt->decode($row->first_name).'</td>
+						<td>'.$this->encrypt->decode($row->last_name).'</td>
+						<td>'.$this->encrypt->decode($row->age).'</td>
+						<td>'.$this->encrypt->decode($row->gender).'</td>
+						<td><a href="'.base_url().'encryptiondecryption/edit/'.$row->id.'">Edit</a></td>
+					</tr>';
+				}
+				?>
 				</table>
 			</div>
 		</div>

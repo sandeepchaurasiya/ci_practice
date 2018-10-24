@@ -27,6 +27,17 @@
 		<br />
 		<div class="box">
 			<h3 align="center">Codeigniter3 Encryption and Decryption - Update Data</h3>
+			            <?php
+            if(validation_errors() != '')
+            {
+                echo '
+                <div class="alert alert-danger alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    ' . validation_errors() .'
+                </div>
+                ';
+            }
+            ?>
 			<br />
 			<?php
 
