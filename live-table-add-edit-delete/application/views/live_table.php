@@ -65,7 +65,7 @@ $(document).ready(function(){
           html += '<td class="table_data" data-row_id="'+data[count].id+'" data-column_name="first_name" contenteditable>'+data[count].first_name+'</td>';
           html += '<td class="table_data" data-row_id="'+data[count].id+'" data-column_name="last_name" contenteditable>'+data[count].last_name+'</td>';
           html += '<td class="table_data" data-row_id="'+data[count].id+'" data-column_name="age" contenteditable>'+data[count].age+'</td>';
-          html += '<td><button type="button" name="delete_btn" id="'+data[count].id+'" class="btn btn-xs btn-danger btn_delete"><span class="glyphicon glyphicon-remove"></span></button></td></tr>';
+          html += '<td><button type="button" name="delete_btn" id="'+data[count].id+'" class="btn btn-danger btn-xs  btn_delete"><span class="glyphicon glyphicon-remove"></span></button></td></tr>';
         }
         $('tbody').html(html);
       }
@@ -95,7 +95,7 @@ $(document).ready(function(){
       success:function(data){
         load_data();
       }
-    })
+    });
   });
 
   $(document).on('blur', '.table_data', function(){
@@ -110,7 +110,7 @@ $(document).ready(function(){
       {
         load_data();
       }
-    })
+    });
   });
 
   $(document).on('click', '.btn_delete', function(){
@@ -124,7 +124,7 @@ $(document).ready(function(){
         success:function(data){
           load_data();
         }
-      })
+      });
     }
   });
   
