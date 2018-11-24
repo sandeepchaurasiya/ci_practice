@@ -4,7 +4,7 @@
       //functions  
       function email_availibility()  
       {  
-           $data["title"] = "Codeigniter Tutorial - Check Email availibility using Ajax";  
+           $data["title"] = "Codeigniter Tutorial - Check Email availability using Ajax";  
            $this->load->view("email_availibility", $data);  
       }  
       function check_email_avalibility()  

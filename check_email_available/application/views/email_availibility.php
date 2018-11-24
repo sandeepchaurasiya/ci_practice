@@ -23,7 +23,7 @@
  </html>  
  <script>  
  $(document).ready(function(){  
-      $('#email').change(function(){  
+      $('#email').change(function(){  //keyup
            var email = $('#email').val();  
            if(email != '')  
            {  
