@@ -2,33 +2,44 @@
 <head>
     <title>Codeigniter Encryption and Decryption - Update Data</title>
     
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
     body
     {
-     background-color: #f1f1f1;
+    	background-color: #f1f1f1;
     }
     .box
     {
-     width: 600px;
-     margin:0 auto;
-     background-color: #fff;
-     border:1px solid #ccc;
-     border-radius: 5px;
-     padding:16px;
+    	width: 600px;
+    	margin:0 auto;
+    	background-color: #fff;
+    	border:1px solid #ccc;
+    	border-radius: 5px;
+    	padding:16px;
     }
- </style>
+	</style>
 </head>
 <body>
- <div class="container">
-  <br />
-  <br />
-  <div class="box">
-   <h3 align="center">Codeigniter3 Encryption and Decryption - Update Data</h3>
-   <br />
-   <?php
+	<div class="container">
+		<br />
+		<br />
+		<div class="box">
+			<h3 align="center">Codeigniter3 Encryption and Decryption - Update Data</h3>
+			            <?php
+            if(validation_errors() != '')
+            {
+                echo '
+                <div class="alert alert-danger alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    ' . validation_errors() .'
+                </div>
+                ';
+            }
+            ?>
+			<br />
+			<?php
 
             foreach($data->result() as $row)
             {
@@ -59,8 +70,8 @@
             }
 
             ?>
-  </div>
-  <br />
- </div>
+		</div>
+		<br />
+	</div>
 </body>
 </html>

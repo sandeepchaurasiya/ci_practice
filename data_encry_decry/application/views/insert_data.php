@@ -2,32 +2,32 @@
 <head>
     <title>Codeigniter Encryption and Decryption - Insert Data</title>
     
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
     body
     {
-     background-color: #f1f1f1;
+    	background-color: #f1f1f1;
     }
     .box
     {
-     width: 600px;
-     margin:0 auto;
-     background-color: #fff;
-     border:1px solid #ccc;
-     border-radius: 5px;
-     padding:16px;
+    	width: 600px;
+    	margin:0 auto;
+    	background-color: #fff;
+    	border:1px solid #ccc;
+    	border-radius: 5px;
+    	padding:16px;
     }
- </style>
+	</style>
 </head>
 <body>
- <div class="container">
-  <br />
-  <br />
-  <div class="box">
-   <h3 align="center">Codeigniter3 Encryption and Decryption - Insert Data</h3>
-   <br />
+	<div class="container">
+		<br />
+		<br />
+		<div class="box">
+			<h3 align="center">Codeigniter3 Encryption and Decryption - Insert Data</h3>
+			<br />
             <?php
             if(validation_errors() != '')
             {
@@ -39,7 +39,7 @@
                 ';
             }
             ?>
-   <form method="post" action="<?php echo base_url(); ?>encryptiondecryption/insert_validation">
+			<form method="post" action="<?php echo base_url(); ?>encryptiondecryption/insert_validation">
                 <input type="text" name="first_name" class="form-control" placeholder="Enter First Name" />
                 <br />
                 <input type="text" name="last_name" class="form-control" placeholder="Enter Last Name" />
@@ -55,8 +55,8 @@
                     <input type="submit" name="insert" class="btn btn-primary" value="Insert" />
                 </div>
             </form>
-  </div>
-  <br />
- </div>
+		</div>
+		<br />
+	</div>
 </body>
 </html>
