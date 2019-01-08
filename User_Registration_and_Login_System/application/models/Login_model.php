@@ -11,7 +11,8 @@ class Login_model extends CI_Model
    {
     if($row->is_email_verified == 'yes')
     {
-     $store_password = $this->encrypt->decode($row->password);
+    // $store_password = $this->encrypt->decode($row->password);
+     $store_password = $row->password;
      if($password == $store_password)
      {
       $this->session->set_userdata('id', $row->id);
