@@ -32,10 +32,10 @@
     <div class="list-group">
      <h3>Price</h3>
      <input type="hidden" id="hidden_minimum_price" value="0" />
-                    <input type="hidden" id="hidden_maximum_price" value="65000" />
-                    <p id="price_show">1000 - 65000</p>
-                    <div id="price_range"></div>
-                </div>    
+			<input type="hidden" id="hidden_maximum_price" value="65000" />
+			<p id="price_show">1000 - 65000</p>
+			<div id="price_range"></div>
+	</div>    
                 <div class="list-group">
      <h3>Brand</h3>
      <?php
@@ -111,7 +111,7 @@ $(document).ready(function(){
 
     function filter_data(page)
     {
-        $('.filter_data').html('<div id="loading" style="" ></div>');
+        $('.filter_data').html('<div id="loading" ></div>');
         var action = 'fetch_data';
         var minimum_price = $('#hidden_minimum_price').val();
         var maximum_price = $('#hidden_maximum_price').val();
