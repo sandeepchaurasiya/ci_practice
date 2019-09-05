@@ -2,11 +2,12 @@
 defined('BASEPATH') OR exit('No direct Script access allowed');
 
 class EncryptionDecryption extends CI_Controller
-{
+{	
+	
 	function index()
 	{
 		$this->load->model('encryptiondecryption_model');
-		$this->load->library('encrypt');
+		//$this->load->library('encrypt');
 		$data['data'] = $this->encryptiondecryption_model->fetch_data();
 		$this->load->view('encryption_decryption',$data);
 		

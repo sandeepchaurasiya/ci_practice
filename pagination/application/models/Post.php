@@ -4,8 +4,8 @@ class Post extends CI_Model{
     function getRows($params = array())
     {
         $this->db->select('*');
-        $this->db->from('posts');
-        $this->db->order_by('created','desc');
+        $this->db->from('post');
+        
         
         if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
             $this->db->limit($params['limit'],$params['start']);
